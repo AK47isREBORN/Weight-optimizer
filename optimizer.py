@@ -4,16 +4,11 @@ import shutil
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import threading
+from runner import run_solver
  
 # ---------------- USER INPUTS ----------------
 MEMORY = 999999999
 # -------------------------------------------------
- 
-# 1️⃣ Run solver
-def run_solver(k_file, solver, ncpu):
-    cmd = f'"{solver}" i={k_file} ncpu={ncpu} memory={MEMORY}'
-    print(f"⚡ Running solver: {cmd}")
-    subprocess.run(cmd, shell=True)
  
  
 # 2️⃣ Parse elout
